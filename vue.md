@@ -378,3 +378,31 @@ var vm = new Vue({
   Computed reversed message: "olleH"
 
   值得注意的是，不论是计算属性还是方法（method），虽然在编写时是在computed/method下，最终执行时，this都是指向vue实例，所以，计算属性跟方法都不能使用箭头函数
+    
+9. slot
+  
+  如果在组件标签内看到html标签，基本可以认为这里使用了插件，父元素会定义一些内容（html标签）分发，替换掉子元素（组件）的slot标签。
+  
+  ```
+    // 父组件
+    <rd-swipe :swipe="swipe">
+      <!--这里用到slot，插件机制 -->
+      <div class="rd-swipe-item" :key="index" :style="{ 'background-image': `url(${img})` }" v-for="(img, index) in imgs">
+      </div>
+    </rd-swipe>
+    
+    
+    //子组件
+    <div class="rd-swipe">
+        <div class="rd-swipe-wrapper" :style="wrapperStyle">
+            <slot></slot>
+        </div>
+        ...
+        // 翻页标签
+    </div>
+  ```
+  
+  渲染出来的，子组件中的slot会被父组件传入的html代码替换
+  
+  **父组件模板的所有东西都会在父级作用域内编译；子组件模板的所有东西都会在子级作用域内编译**
+  所以，不需要担心html代码放在子组件中会找不到imgs属性。
