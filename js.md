@@ -209,3 +209,16 @@ document.body.appendChild(script1);
   
   摘自[js中表达式 >>> 0 浅析](https://segmentfault.com/a/1190000014613703)
   
+
+### js获取随机颜色
+  
+  ```
+  function getRandomColor(){ 
+    return "#"+("00000"+((Math.random()*16777215+0.5)>>0).toString(16)).slice(-6); 
+  } 
+  // 16777215为16进制的颜色ffffff转成10进制的数字 
+  // >>数字取整 
+  // 转成16进制不足6位的以0来补充 
+  ```
+
+  
