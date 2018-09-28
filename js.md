@@ -214,7 +214,7 @@ document.body.appendChild(script1);
   
   ```
   function getRandomColor(){ 
-    return "#"+("00000"+((Math.random()*16777215+0.5)>>0).toString(16)).slice(-6); 
+    return "#"+("00000"+((Math.random()*parseInt("ffffff",16)+0.5)>>0).toString(16)).slice(-6); 
   } 
   // 16777215为16进制的颜色ffffff转成10进制的数字 
   // >>数字取整 
