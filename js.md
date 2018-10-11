@@ -220,6 +220,21 @@ document.body.appendChild(script1);
   // >>数字取整 
   // 转成16进制不足6位的以0来补充 
   ```
+  
+  计算出颜色的补色
+  以RGB而言，只要计算R、G、B每一位的值与256的差值即可
+  ```
+  // 计算补色
+  var R = bgColor.slice(0,2);
+  var G = bgColor.slice(2,4);
+  var B = bgColor.slice(4,6);
+  var reverseR = (255-parseInt(R,16)).toString(16);
+  var reverseG = (255-parseInt(G,16)).toString(16);
+  var reverseB = (255-parseInt(B,16)).toString(16);
+  
+  // 此处的 '#'+reverseR+reverseG+reverseB 即为补色
+  ```
+  
 
 ### HTML5中的Web Notification桌面通知
 
