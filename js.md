@@ -1,6 +1,6 @@
 ### js整理
 
-## 1. 关于闭包（closure）
+## 关于闭包（closure）
 
 ```
 function fn(){
@@ -221,4 +221,9 @@ document.body.appendChild(script1);
   // 转成16进制不足6位的以0来补充 
   ```
 
-  
+### HTML5中的Web Notification桌面通知
+
+参考地址[简单了解HTML5中的Web Notification桌面通知](https://www.zhangxinxu.com/wordpress/2016/07/know-html5-web-notification/)
+
+
+
