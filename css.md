@@ -35,4 +35,15 @@ inherit：继承父元素的盒模型模式。
 
 ### 5. 特殊选择器 ~ > +
 
++ 表示选中紧接在另一个元素后的元素，而且二者有相同的父元素
+
++ 的常见用法
+  1. 自定义单选框样式时，可以写一个input\[radio type='hidden'\]，在旁边写设计好的样式(label)，
+  使用 + 选中input 与label 来美化样式
+  // 未选中的样式
+  input\[type="radio"\] + label::before{}
+  // 选中的样式
+  input\[type="radio"\]:checked + label::before{}
+  
+
 
