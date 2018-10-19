@@ -241,4 +241,42 @@ document.body.appendChild(script1);
 参考地址[简单了解HTML5中的Web Notification桌面通知](https://www.zhangxinxu.com/wordpress/2016/07/know-html5-web-notification/)
 
 
+### 事件绑定与事件委托
 
+事件绑定：
+原生js下使用 addEventListener, Jquery使用on/bind
+
+事件委托，是对事件绑定的扩展，利用事件冒泡，只指定一个事件处理程序来管理某一类型的所有事件，比如对很多数据的表格中进行事件绑定。
+
+例如下面这个列表，点击时使li变成红色
+```
+<ul id = "lists">
+         <li>列表1</li>
+         <li>列表2</li>
+         <li>列表3</li>
+         <li>列表4</li>
+         <li>列表5</li>
+         <li>列表6</li>
+ </ul>
+ 
+// js
+var lists = document.getElementById("lists");
+lists.addEventListener("click",function(event){
+    var target = event.target;
+    //防止父元素ul也触发事件
+    if(target.nodeName == "LI"){
+       target.style.backgroundColor = "red";
+    }
+})
+ 
+// jquery
+// 要用到事件回调函数中自带的参数event，event.target
+// on方法可以对元素类型进行过滤
+$("#lists").on("click","li",function(event){
+	var target = $(event.target);
+	target.css("background-color","red");
+})
+ 
+```
+
+### bind与on方法的区别
