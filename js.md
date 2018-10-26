@@ -280,3 +280,16 @@ $("#lists").on("click","li",function(event){
 ```
 
 ### bind与on方法的区别
+
+
+### 关于setTImeOut(function(){},0)
+
+这里就必须要理解javascript的执行过程 [这一次，彻底弄懂javascript执行机制](https://juejin.im/post/59e85eebf265da430d571f89)。
+
+简单来说 setTImeOut(function(){},0) 就是告诉浏览器，有空了就来执行这个方法
+
+
+
+### 关于元素拖动，可以参考这里的代码
+
+[AngularJs指令](http://www.angularjs.net.cn/tutorial/5.html)
