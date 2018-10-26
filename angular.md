@@ -71,21 +71,21 @@
     概念与vue中的计算属性差不多
 
 7. 表单（ngvalidate）
-写法
-```
-    <form ngvalidate>
-        ...
-    </form>
-```
+    写法
+    ```
+        <form ngvalidate>
+            ...
+        </form>
+    ```
 
-Angular定义了如下几个css类来进行表单验证的提示
+    Angular定义了如下几个css类来进行表单验证的提示
 
-+ ng-valid 
-+ ng-invalid 
-+ ng-pristine 
-+ ng-dirty
+    + ng-valid 
+    + ng-invalid 
+    + ng-pristine 
+    + ng-dirty
 
-在需要时可以直接定义这几个类的样式，来体现表单填写正确/不合格/初始状态/脏数据的不同状态
+    在需要时可以直接定义这几个类的样式，来体现表单填写正确/不合格/初始状态/脏数据的不同状态
 
 8. $location
     有一个特殊的replace方法，
