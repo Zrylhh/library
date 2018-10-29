@@ -446,4 +446,6 @@ move(); // [0, 0]
   // s2: 0
   ```
 
-  
+  ### ... 对象展开运算符
+  [tc39/proposal-object-rest-spread](https://github.com/tc39/proposal-object-rest-spread)
+  [ES6展开运算符的6种妙用](https://www.jianshu.com/p/c5230c11781b)
