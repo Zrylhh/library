@@ -293,3 +293,7 @@ $("#lists").on("click","li",function(event){
 ### 关于元素拖动，可以参考这里的代码
 
 [AngularJs指令](http://www.angularjs.net.cn/tutorial/5.html)
+
+### webworker
+
+[Web Worker 使用教程](http://www.ruanyifeng.com/blog/2018/07/web-worker.html)
