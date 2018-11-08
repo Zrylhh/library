@@ -42,7 +42,7 @@ inherit：继承父元素的盒模型模式。
   // 未选中的样式
   input\[type="radio"\] + label::before{}
   // 选中的样式
-  input\[type="radio"\]:checked + label::before{}
+  input\[type="radio"\]:checked + label::before{  }
   
 
 
