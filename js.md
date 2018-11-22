@@ -297,3 +297,8 @@ $("#lists").on("click","li",function(event){
 ### webworker
 
 [Web Worker 使用教程](http://www.ruanyifeng.com/blog/2018/07/web-worker.html)
+
+
+### utf-8格式编码的中文转化为普通的中文
+
+unescape('&#x4E2D;&#x56FD;'.replace(/&#x/g, '%u').replace(/;/g, ''))
