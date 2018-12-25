@@ -7,7 +7,7 @@
 例子
 
 ```
-ps -ef|grep Msg|awk '{pring "kill -9" $2}'
+ps -ef|grep Msg|awk '{print "kill -9" $2}'
 
 kill -9 18083
 ...
