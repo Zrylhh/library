@@ -26,3 +26,27 @@ kill -9 18083
 /sbin: 主要放置一些系统管理的必备程式例如:cfdisk、dhcpcd、dump、e2fsck、fdisk、halt、ifconfig、ifup、 ifdown、init、insmod、lilo、lsmod、mke2fs、modprobe、quotacheck、reboot、rmmod、 runlevel、shutdown等。 
 
 /usr/sbin: 放置一些网路管理的必备程式例如:dhcpd、htpd、imap、in.*d、inetd、lpd、named、netconfig、nmbd、samba、sendmail、squid、swap、tcpd、tcpdump等。 
+
+## 实时网卡流量
+```
+sar -n DEV 1 2
+```
+命令后面1 2 意思是：每一秒钟取1次值，取2次。
+参数解释：
+  + IFACE：LAN接口
+  + rxpck/s：每秒钟接收的数据包
+  + txpck/s：每秒钟发送的数据包
+  + rxbyt/s：每秒钟接收的字节数
+  + txbyt/s：每秒钟发送的字节数
+  + rxcmp/s：每秒钟接收的压缩数据包
+  + txcmp/s：每秒钟发送的压缩数据包
+  + rxmcst/s：每秒钟接收的多播数据包
+  + rxerr/s：每秒钟接收的坏数据包
+  + txerr/s：每秒钟发送的坏数据包
+  + coll/s：每秒冲突数
+  + rxdrop/s：因为缓冲充满，每秒钟丢弃的已接收数据包数
+  + txdrop/s：因为缓冲充满，每秒钟丢弃的已发送数据包数
+  + txcarr/s：发送数据包时，每秒载波错误数
+  + rxfram/s：每秒接收数据包的帧对齐错误数
+  + rxfifo/s：接收的数据包每秒FIFO过速的错误数
+  + txfifo/s：发送的数据包每秒FIFO过速的错误数
