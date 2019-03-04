@@ -302,3 +302,6 @@ $("#lists").on("click","li",function(event){
 ### utf-8格式编码的中文转化为普通的中文
 
 unescape('&#x4E2D;&#x56FD;'.replace(/&#x/g, '%u').replace(/;/g, ''))
+
+### 如何维护nodejs程序的稳定性
+捕获这两个防止意外 uncaughtException 和 unhandledRejection。
