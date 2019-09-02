@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/public/resource/video-js.min.css" rel="stylesheet">
+<script src="/public/resource/video.min.js"></script>
+<script src="/public/resource/videojs-contrib-hls.js"></script>
+</head>
+<body>
+ <video id="example-video" class="video-js vjs-default-skin" controls width="640" height="264">
+ <source src="https://s3.amazonaws.com/_bc_dml/example-content/bipbop-advanced/bipbop_16x9_variant.m3u8" type='application/x-mpegURL' />
+</video>
+<button onclick="getCurrentTime()">getCurrentTime</button>
+<button onclick="setPlayerTime()">setPlayerTime</button>
+<button onclick="playlists()">playlists</button> 
+<button onclick="segmentXhrTime()">segmentXhrTime</button>
+<button onclick="bandwidth()">bandwidth</button>
+<button onclick="bytesReceived()">bytesReceived</button>
+<button onclick="selectPlaylist()">selectPlaylist</button>
+<button onclick="representations()">representations</button>
+<button onclick="xhr()">xhr</button>
+
+
+<script type="text/javascript">
+
+var player = videojs('example-video');
+    player.play();
+var hls = player.tech({ IWillNotUseThisInPlugins: true }).hls;
+
+player.loadedmetadata = function(){
+	alert("loadedmetadata!");
+}
+
+player.mediachange = function(){
+	alert("mediachange!");
+}
+player.loadedplaylist = function(){
+	alert("loadedplaylist!");
+}
+function getCurrentTime(){
+    alert(player.currentTime());
+}
+function setPlayerTime(){
+    player.currentTime(50);
+}
+function playlists(){
+	var list = hls.playlists;
+	var master = hls.playlists.master;
+	var media = hls.playlists.media;
+	alert(hls.playlists.master);
+	alert(hls.playlists.media);
+}  
+function segmentXhrTime(){
+	var segmentXhrTime = hls.segmentXhrTime;
+	alert(hls.segmentXhrTime);
+}  
+function bandwidth(){
+	var badnwidth = hls.bandwidth;
+	alert(hls.bandwidth);
+}  
+function bytesReceived(){
+	var bytesReceived = hls.bytesReceived;
+	alert(hls.bytesReceived);
+}  
+function selectPlaylist(){
+	alert(hls.selectPlaylist());
+	hls.selectPlaylist();
+} 
+function representations(){
+	var representations = hls.representations;
+	alert(hls.representations());
+}  
+function xhr(){
+	alert(hls.xhr());
+}  
+function 
+</script> 
+</body>
+</html>
+

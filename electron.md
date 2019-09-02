@@ -22,3 +22,8 @@
 #### 在Electron 中进行Ajax请求，并不会遇到跨域的问题
 
 #### 在Electron 中可以使用 child_process (属于node模块) 调用系统命令
+
+
+#### electron-builder中自定义nsis
+    
+    可以在build/installer.nsh中写nsis代码，参考electron_doc/installer.nsh.

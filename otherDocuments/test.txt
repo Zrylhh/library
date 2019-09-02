@@ -1,0 +1,10 @@
+
+107.148.250.240
+root/55XjRffLz9zx  29747
+Ssr29747
+18230
+aes-256-ctr
+auth_chain_b
+tls1.2_ticket_auth
+
+SETOFF2019
